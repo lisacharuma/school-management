@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action="#" id="myForm">
+        <label for="city">Enter City</label>
+        <input type="text" id="city"> <br>
+        <label for="country">Enter Country</label>
+        <input type="text" id="country"> <br>
+        <input type="submit" onsubmit="processFormData()">
+    </form>
+
+    <div id="table">
+        <h2>Database Simulation</h2>
+        <table id="dataTable">
+            <tr>
+                <th>city</th>
+                <th>country</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function insertData(city,country)
+        {
+            let table = document.getElementById('dataTable');
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = city;
+            cell2.innerHTML = country;
+        }
+
+        function processFormData(){
+            //Access the form
+            let form = document.getElementById("myForm");
+            //Access elements by name and get values
+            let city = form.elements.city.value;
+            let country = form.elements.country.value;
+
+            insertData(city, country);
+
+            document.getElementById('city').value = '';
+            document.getElementById('country').value = '';
+        }
+    </script>
+</body>
+</html>

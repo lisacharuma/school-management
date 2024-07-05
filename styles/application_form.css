@@ -1,0 +1,82 @@
+
+ /* Style for the container to center the form */
+ .form-container {
+    background-color: #2b3330;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 120vh; /* Full viewport height */
+}
+
+form {
+    /*background-color: #3CBC8D;*/
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+
+/*Styling labels, all of them */
+.form-group label{
+    display: inline-block; /*Align label and input side by side */
+    width: 150px; /* Fixed width for labels to align properly */
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Style the radio button labels and inputs */
+.radio-group label[for="Mr."],
+.radio-group label[for="Ms."],
+.radio-group label[for="Mrs."] {
+    margin-right: 5px; /* Add space to the right of each radio button label */
+}
+.radio-group input[type="radio"] {
+    margin-right: 70px; /* Add space to the right of each radio button input */
+}
+
+.radio-group label{
+    margin-bottom: 20px;
+}
+
+/* Ensure the first label in the radio group doesn't get extra width */
+.radio-group label[for="title"] {
+    margin-right: 150px;
+    margin-bottom: 10px;
+   /* width: 150px; /* To align with other labels */
+    font-weight: bold; /* Keep the bold font-weight for the title */
+}
+
+/* Style the input fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: calc(70% - 130px); /* Ensure the input fields take the remaining width */
+    padding: 8px; /* Add some padding inside the input fields */
+    border: 1px solid #ccc; /* Add a border to input fields */
+    border-radius: 4px; /* Add rounded corners */
+    margin-left: 10px; /* Add space between label and input */
+}
+
+/* Style the reset and submit buttons */
+.form-group input[type="reset"],
+.form-group input[type="submit"] {
+    width: auto; /* Let the buttons size automatically */
+    padding: 10px 20px; /* Add some padding to the buttons */
+    background-color: #ffffff; /* Change background color */
+    color: #3CBC8D; /* Change text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Add hover effect for buttons */
+.form-group input[type="reset"]:hover,
+.form-group input[type="submit"]:hover {
+    background-color: #797474; /* Change background color on hover */
+}
